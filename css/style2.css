@@ -1,0 +1,35 @@
+.resume{
+    overflow:hidden;
+}
+
+.resume, .bio{
+   
+    margin-top: 100px;
+}
+
+.bio h1{
+    text-align:left;
+    color: #a45455;
+}
+.bio p{
+    font-size: 1.4em;
+    font-family: 'Open Sans', sans-serif;
+    line-height: 1.6em;
+    margin-bottom:30px;
+}
+
+span a{
+    color: #447373;
+}
+
+.contactme{
+    margin-top:100px;
+}
+
+
+.media{
+    
+    margin-top:50px;
+    text-align:center;
+}
+

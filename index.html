@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Silvo Designs</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="css/normalize.css" />
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.css" />
+    <link rel="stylesheet" type="text/css" href="css/style.css" />
+    <link rel="stylesheet" type="text/css" href="css/animate.css" />
+    <link href='https://fonts.googleapis.com/css?family=Roboto:400,300' rel='stylesheet' type='text/css'>
+</head>
+<body>
+    <div class="container-fluid">
+        <div class="wrapper">
+            <div class="row header">
+
+                <div class=" col-sm-2 col-md-2 col-md-offset-2">
+                    <a href="index.html"><img src="img/logo.svg" class="img-responsive logo" /></a>
+                </div>
+                <div class="col-sm-2 col-md-6 right"><img src="img/burger.svg" class="img-responsive burger" /></div>
+                <div class="desktop-navigation col-md-3 col-md-offset-4">
+                    <ul>
+                        <li class="selected"><a href="index.html"><img width="50" class="img-responsive" src="img/home.svg"></a> </li>
+                        <li><a href="about.html"><img width="50" class="img-responsive" src="img/about.svg"></a></li>
+                        <li><a href="contact.html"><img width="50" class="img-responsive" src="img/contact.svg"></a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class=" row mobile-navigation">
+                <ul>
+                    <li><a href="index.html">HOME</a>
+                        <hr>
+                    </li>
+                    <li><a href="about.html">ABOUT</a>
+                        <hr>
+                    </li>
+                    <li><a href="contact.html">CONTACT</a>
+                        <hr>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="fixed-container row ">
+                 <span class="img-responsive arrow not_visible glyphicon glyphicon-remove" data-bind="click: $root.clearDisplay" ></span>
+                <div class="display_area">
+                  
+                </div>
+                <div class="row work_filter">
+  
+                    <ul class="col-md-9 types " role="tablist">
+                       <a href="#home" aria-controls="home" role="tab" data-toggle="tab"> <li role="presentation" data-bind="click: $root.ChangeType" class="nav category  active">All</li></a>
+                       <a href="#home2" aria-controls="home2" role="tab" data-toggle="tab"><li role="presentation" data-bind="click: $root.ChangeType" class="nav">Graphic Design</li></a>
+                       <a href="#home3" aria-controls="home3" role="tab" data-toggle="tab"><li role="presentation" data-bind="click: $root.ChangeType" class="nav">Web Design</li></a>
+                                
+                    </ul>
+                </div>
+                <div class="pieces">
+                    <div class="tab-content">
+                        <div role="tabpanel" class="renders tab-pane fade in active" data-bind="foreach: work" id="home">
+                            <img data-bind="attr{src:img}, click: $parent.renderWork" class="img-responsive col-md-6 col-lg-3">
+                        </div>
+                        <div role="tabpanel" class="tab-pane fade" id="home2" data-bind="foreach: work">
+                              <img data-bind="attr{src:img}, click: $parent.renderWork, visible: $parent.isGraphic(type)" class="img-responsive col-md-6 col-lg-3">
+                        </div>
+                        <div role="tabpanel" class="tab-pane fade" id="home3" data-bind="foreach: work">
+                              <img data-bind="attr{src:img}, click: $parent.renderWork, visible: $parent.isWeb(type)" class="img-responsive col-md-6 col-lg-3">
+                        </div>
+                     
+                     </div>
+                </div>
+            </div>
+        </div>
+        <div class="row footer">
+            <ul class="col-md-3 col-md-offset-2">
+                <li>Site Map +</li>
+                <li>home</li>
+                <li>about</li>
+                <li>contact</li>
+            </ul>
+            <ul class="col-md-3">
+                <li>Contact Info +</li>
+                <li>Kevin Silvestre</li>
+                <li>26 Endicott st # 2</li>
+                <li>Lynn, MA 01902</li>
+                <li>781 952 4449</li>
+                <li>silvestrekevin@hotmail.com</li>
+            </ul>
+            <ol class="col-md-3">
+                <li><a href="https://www.linkedin.com/in/kevinsilvestre">LinkedIn</a></li>
+                <li><a href="https://www.behance.net/silvestrekevin">Behance</a></li>
+                <li><a href="https://github.com/silvodesigns">Github</a></li>
+                <li><img src="img/logo.svg" width="25"></li>
+            </ol>
+        </div>
+    </div>
+
+
+
+
+
+
+    <script type="text/javascript" src="js/knockout-3.2.0.js"></script>
+    <script type="text/javascript" src="js/jquery-1.12.1.min.js"></script>
+    <script type="text/javascript" src="js/bootstrap.js"></script>
+    <script type="text/javascript" src="js/app2.js"></script>
+    <script type="text/javascript" src="js/app.js"></script>
+</body>
+
+</html>
